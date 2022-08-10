@@ -1,0 +1,48 @@
+---
+layout: main
+title: 所有文章
+permalink: /archive/
+---
+
+<section class="blog-archive">
+    <h1>文章</h1>
+    <!-- Article List -->
+    {%- assign _sorted_list = site.posts -%}
+    {%- assign _sorted_list = _sorted_list | sort: 'date' -%}
+    {%- assign _sorted_list = _sorted_list | reverse -%}
+
+    {%- for _article in _sorted_list -%}
+    {%- assign _tags = '' -%}
+    {%- for _tag in _article.tags -%}
+    {%- assign _tag_encode = _tag | strip | url_encode -%}
+    {%- if forloop.last -%}
+    {%- assign _tags = _tags | append: _tag_encode -%}
+    {%- else -%}
+    {%- assign _tags = _tags | append: _tag_encode | append: ',' -%}
+    {%- endif -%}
+    {%- endfor -%}
+
+    {% comment %} group by year {% endcomment %}
+    {%- assign _currentdate = _article.date | date: '%Y' -%}
+    {%- if _currentdate != _date -%}
+    {%- unless forloop.first -%}</section>{%- endunless -%}
+    <section>
+            <span class="listing-seperator">
+                <span class="tag-text">{{ _currentdate }}</span>
+            </span>
+
+        {%- assign _date = _currentdate -%}
+        {%- endif -%}
+
+        <div class="post-preview" data-tags="{{ _tags }}">
+            <a href="{{ _article.url | prepend: site.baseurl }}">
+                <h2 class="post-title">
+                    {{_article.date | date: '%Y-%m-%d'}}-{{ _article.title }}
+                </h2>
+            </a>
+            <hr>
+        </div>
+        {%- if forloop.last -%}
+    </section>{%- endif -%}
+    {% endfor %}
+</section>
