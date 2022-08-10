@@ -1,0 +1,44 @@
+.blog-archive {
+  width: 100%;
+  background-color: $white;
+  padding: 0 35px 20px;
+
+  h1 {
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.3;
+    color: $dark-blue;
+  }
+
+  .listing-seperator {
+    color: #0085a1;
+    font-size: 21px !important;
+    &::before {
+      margin-right: 5px;
+    }
+    .tag-text {
+      font-weight: 200;
+      font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+    }
+  }
+
+  .post-preview {
+    position: relative;
+    > a {
+      color: $dark;
+      text-decoration: none;
+      .post-title {
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 20px;
+      }
+    }
+
+    hr {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: 0;
+      border-top: 1px solid #eee;
+    }
+  }
+}

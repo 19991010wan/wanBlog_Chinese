@@ -1,0 +1,161 @@
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .post {
+    width: 48%;
+    max-width: 100%;
+    margin: 0 0.9% 1.5%;
+    flex-direction: column;
+
+    .post-thumbnail {
+      width: 100%;
+    }
+
+    .post-content {
+      width: 100%;
+      .post-title {
+        margin: 0 0 5px;
+        a {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width : 768px) {
+  .blog-archive {
+    .listing-seperator {
+      font-size: 20px !important;
+      line-height: 2 !important;
+    }
+
+    .post-preview {
+      margin-left: 20px;
+      > a {
+        > .post-title {
+          font-size: 18px;
+          line-height: 1.3;
+        }
+      }
+      .post-meta {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .sidebar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: $white;
+    box-shadow: 0 1px 1px 0 rgba(31, 35, 46, .15);
+
+    .navigation-wrapper {
+      position: fixed;
+      z-index: 10000 !important;
+      width: 100%;
+      padding: 10px 0;
+      background-color: #f0f0f0;
+      text-align: center;
+      margin: -10px;
+
+      .navigation {
+        display: inline-block;
+
+        .navigation__item {
+          float: left;
+          line-height: 1em;
+
+          &::after {
+            content: '';
+          }
+
+          a {
+            padding: 10px;
+            width: 100%;
+            border-color: #666;
+            color: #666;
+            /*opacity: .8; */
+
+            &:hover {
+              color: #263959;
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      margin-bottom: 10px;
+    }
+
+  }
+  .about {
+    text-align: center;
+    max-width: 480px;
+    margin: 80px auto auto;
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .content-box {
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    .next{
+      float:left;
+    }
+    .previous{
+      float:left;
+    }
+  }
+
+  .contact-title, .copyright {
+    display: none;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+  }
+  .content-box {
+    padding: 10px;
+  }
+  .post {
+    width: 98%;
+    max-width: 100%;
+    margin: 2%;
+    flex-direction: column;
+
+    .post-thumbnail {
+      width: 100%;
+    }
+
+    .post-content {
+      width: 100%;
+      .post-title {
+        margin: 0 0 5px;
+        a {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+}
