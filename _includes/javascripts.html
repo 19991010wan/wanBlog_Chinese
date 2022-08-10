@@ -1,0 +1,63 @@
+<!-- Main Js -->
+<script src="{{site.baseurl}}/assets/js/jquery-1.11.2.js"></script>
+<script src="{{site.baseurl}}/assets/js/paging.js"></script>
+
+<script>
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+
+    var page = new Paging();
+    if (GetRequest().currentpage) {
+        indexpage = GetRequest().currentpage;
+    } else {
+        indexpage = 1;
+    }
+    totalposts = "{{paginator.total_posts}}"
+    perpage = "{{paginator.per_page}}"
+    totalposts = parseInt(totalposts)
+    perpage = parseInt(perpage)
+    console.log("一共有" + totalposts + "篇")
+    console.log("每页有" + perpage + "篇")
+    // console.log("123455" + "{{paginator.next_page}}")
+    page.init({
+        target: $('#pageTool'),
+        pagesize: perpage,
+        count: totalposts,
+        current: indexpage,
+        callback: function(pagecount, size, count) {
+            console.log(arguments)
+            // alert('当前第 ' + pagecount + '页,每页 ' + size + '条,总页数：' + count + '页');
+            //动态设置总条数 https://github.com/tianxiangbing/paging
+            page.render({
+                // count: 89,
+                current: pagecount
+            });
+            if (pagecount===1){
+                location.href = '{{ site.baseurl }}/'
+            }else{
+                location.href = '{{ site.baseurl }}/page/' + pagecount + '/?currentpage=' + pagecount;
+                // location.href = url + '?currentpage='+pagecount
+            }
+            //这里我写个ajax吧
+
+            //如果你不用ajax分页，你可以直接在这里location.href='xxx.html?page='+pagecount 作跳转，这样的话，页面刷新后，你要传递current进来。
+        }
+    });
+</script>
+
+<script type="text/javascript">
+    function dashangToggle() {
+        $(".hide_box-play").fadeToggle();
+        $(".shang_box-play").fadeToggle();
+    }
+</script>
