@@ -1289,7 +1289,6 @@ a.newer-posts:hover {
   margin: 20px auto;
 }*/
 .paper_pre_next {
-  display: inline-block;
   padding: 0 0 40px 0; }
   .paper_pre_next .next {
     margin-top: 20px;
