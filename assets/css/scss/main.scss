@@ -1,6 +1,5 @@
 @import 'normalize';
 @import 'syntax';
-//@import 'parts/markdown';
 @import 'variables';
 
 *, *::after, *::before {
@@ -47,8 +46,19 @@ blockquote {
   color: #ada8a8;
 }
 
+code{
+  padding: 1px 4px;
+  margin: 0 2px;
+  border-radius: 3px;
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.06);
+  border: 1px solid #d7d0d2;
+  font-family: Monaco,Menlo,"Microsoft YaHei Mono",Consolas,"Courier New",monospace,sans-serif;
+}
+
 pre {
-  padding: 1rem 2rem;
+  margin: 12px 0;
+  padding: 8px 12px;
   overflow: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -62,6 +72,8 @@ pre {
     white-space: pre-wrap;
     word-wrap: break-word;
     word-break: break-all;
+    color:#d1d1c9;
+    background-color: #272822;
   }
 }
 

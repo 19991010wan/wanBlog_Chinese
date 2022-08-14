@@ -397,31 +397,6 @@ template {
 /**
  * Syntax highlighting styles
  */
-code {
-  padding: 1px 4px;
-  margin: 0 2px;
-  border-radius: 3px;
-  color: #000;
-  background-color: rgba(0, 0, 0, 0.06);
-  border: 1px solid #d7d0d2;
-  font-family: Monaco,Menlo,"Microsoft YaHei Mono",Consolas,"Courier New",monospace,sans-serif; }
-
-pre {
-  margin: 12px 0;
-  padding: 8px;
-  word-wrap: break-word;
-  /* IE 5.5-7 */
-  white-space: -moz-pre-wrap;
-  /* Firefox 1.0-2.0 */
-  white-space: pre-wrap;
-  /* current browsers */ }
-  pre > code {
-    margin: 0;
-    padding: 0;
-    color: #d1d1c9;
-    border: none;
-    background-color: #272822; }
-
 .highlight {
   border-radius: 3px;
   background: #272822;
@@ -655,8 +630,18 @@ blockquote {
   font-style: italic;
   color: #ada8a8; }
 
+code {
+  padding: 1px 4px;
+  margin: 0 2px;
+  border-radius: 3px;
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.06);
+  border: 1px solid #d7d0d2;
+  font-family: Monaco,Menlo,"Microsoft YaHei Mono",Consolas,"Courier New",monospace,sans-serif; }
+
 pre {
-  padding: 1rem 2rem;
+  margin: 12px 0;
+  padding: 8px 12px;
   overflow: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -668,7 +653,9 @@ pre {
     overflow: auto;
     white-space: pre-wrap;
     word-wrap: break-word;
-    word-break: break-all; }
+    word-break: break-all;
+    color: #d1d1c9;
+    background-color: #272822; }
 
 table {
   border: 1px solid #aaa;
