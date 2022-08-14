@@ -1056,6 +1056,8 @@ a.newer-posts:hover {
     webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     o-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; }
+  .wrap-content ul {
+    padding-left: 18px; }
 
 .header-page {
   text-align: center;
