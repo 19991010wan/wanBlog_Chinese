@@ -26,24 +26,4 @@
         opacity: 1
     }
 }
-@media screen and (max-width:1200px) and (min-width: 770px) {
-    .back-to-top {
-        left: 50%;
-        margin-left: 45.5%;
-    }
-}
-@media screen and (max-width: 770px) {
-    .back-to-top {
-        right:2.5%;
-        left: auto;
-        // left: 50%;
-        margin-left: 0px;
-        a {
-            width: 33px;
-            height: 33px;
-            line-height: 33px;
-            text-align: center;
-            font-size: 18px;
-        }
-    }
-}
+

@@ -1417,21 +1417,6 @@ a.newer-posts:hover {
   .back-to-top-show:hover {
     opacity: 1; }
 
-@media screen and (max-width: 1200px) and (min-width: 770px) {
-  .back-to-top {
-    left: 50%;
-    margin-left: 45.5%; } }
-@media screen and (max-width: 770px) {
-  .back-to-top {
-    right: 2.5%;
-    left: auto;
-    margin-left: 0px; }
-    .back-to-top a {
-      width: 33px;
-      height: 33px;
-      line-height: 33px;
-      text-align: center;
-      font-size: 18px; } }
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
@@ -1448,6 +1433,10 @@ a.newer-posts:hover {
         margin: 0 0 5px; }
         .post .post-content .post-title a {
           font-size: 21px; } }
+@media screen and (max-width: 1200px) and (min-width: 768px) {
+  .back-to-top {
+    left: 50%;
+    margin-left: 45.5%; } }
 @media only screen and (min-width: 768px) {
   .blog-archive .listing-seperator {
     font-size: 20px !important;
@@ -1493,6 +1482,16 @@ a.newer-posts:hover {
             /*opacity: .8; */ }
             .sidebar .navigation-wrapper .navigation .navigation__item a:hover {
               color: #263959; }
+    .sidebar .back-to-top {
+      right: 2.5%;
+      left: auto;
+      margin-left: 0px; }
+      .sidebar .back-to-top a {
+        width: 33px;
+        height: 33px;
+        line-height: 33px;
+        text-align: center;
+        font-size: 18px; }
     .sidebar footer {
       margin-bottom: 10px; }
 
