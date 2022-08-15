@@ -3,7 +3,7 @@ layout: post
 title: java实现多线程
 date: 2022-08-14 23:00:00 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: java-multithreading.png # Add image post (optional)
+img: java-multithreading.jpg # Add image post (optional)
 tags: [多线程, java] # add tag
 ---
 
