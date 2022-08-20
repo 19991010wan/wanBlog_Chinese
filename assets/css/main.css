@@ -1432,12 +1432,12 @@ body{
   align-items: center;
 }*/
 .rockets {
-  position: absolute;
+  position: fixed;
   left: 50%;
-  margin-left: 580px;
-  bottom: 100px;
-  width: 100px;
-  height: 100px;
+  margin-left: 600px;
+  bottom: 180px;
+  width: 300px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
